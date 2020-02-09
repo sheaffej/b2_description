@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot name="B2">
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.250 0.200 0.080"/>
+      </geometry>
+    </visual>
+    <visual>
+      <geometry>
+        <cylinder radius="0.030" length="0.020"/>
+      </geometry>
+      <origin xyz="0.100 0.110 -0.010" rpy="1.570 0.0 0.0"/>
+    </visual>
+  </link>
+
+</robot>
