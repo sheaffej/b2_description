@@ -1,17 +1,77 @@
 <?xml version="1.0"?>
 <robot name="B2">
 
+<joint name="camera_link_joint" type="fixed">
+  <origin xyz="0.085 0.0 0.175" rpy="0.0 0.0 0.0"/>
+  <parent link="base_link"/>
+  <child link="camera_link"/>
+</joint>
+
   <link name="base_link">
     <visual>
       <geometry>
         <box size="0.250 0.200 0.080"/>
       </geometry>
+      <origin xyz="0.0 0.0 0.030"/>
+      <material name="White">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
     </visual>
     <visual>
       <geometry>
-        <cylinder radius="0.030" length="0.020"/>
+        <cylinder radius="0.0325" length="0.025"/>
       </geometry>
-      <origin xyz="0.100 0.110 -0.010" rpy="1.570 0.0 0.0"/>
+      <origin xyz="0.095 0.0875 -0.030" rpy="1.570 0.0 0.0"/>
+      <material name="Black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <cylinder radius="0.0325" length="0.025"/>
+      </geometry>
+      <origin xyz="0.095 -0.0875 -0.030" rpy="1.570 0.0 0.0"/>
+      <material name="Black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <cylinder radius="0.0325" length="0.025"/>
+      </geometry>
+      <origin xyz="-0.095 0.0875 -0.030" rpy="1.570 0.0 0.0"/>
+      <material name="Black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <cylinder radius="0.0325" length="0.025"/>
+      </geometry>
+      <origin xyz="-0.095 -0.0875 -0.030" rpy="1.570 0.0 0.0"/>
+      <material name="Black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+    <visual>
+      <geometry>
+        <cylinder radius="0.005" length="0.095"/>
+      </geometry>      
+      <origin xyz="0.080 0.0 0.115" rpy="0.0 0.0 0.0"/>
+      <material name="Black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <link name="camera_link">
+    <visual>
+      <geometry>
+        <box size="0.025 0.085 0.025"/>
+      </geometry>
+      <material name="Sky Blue">
+        <color rgba="0.125 0.525 0.90 1.0"/>
+      </material>
     </visual>
   </link>
 
