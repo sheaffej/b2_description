@@ -2,65 +2,59 @@
 <robot name="B2">
 
 <joint name="camera_link_joint" type="fixed">
-  <origin xyz="0.085 0.0 0.175" rpy="0.0 0.0 0.0"/>
+  <origin xyz="0.085 0.0 0.238" rpy="0.0 0.0 0.0"/>
   <parent link="base_link"/>
   <child link="camera_link"/>
+</joint>
+
+<joint name="imu_link_join" type="fixed">
+  <origin xyz="-0.070 -0.040 0.135" rpy="0.0 0.0 0.0"/>
+  <parent link="base_link"/>
+  <child link="imu_link"/>
 </joint>
 
   <link name="base_link">
     <visual>
       <geometry>
-        <box size="0.250 0.200 0.080"/>
+        <box size="0.250 0.200 0.075"/>
       </geometry>
-      <origin xyz="0.0 0.0 0.030"/>
-      <material name="White">
-        <color rgba="1.0 1.0 1.0 1.0"/>
-      </material>
+      <origin xyz="0.0 0.0 0.0825"/>
+      <material name="White" />
     </visual>
     <visual>
       <geometry>
         <cylinder radius="0.0325" length="0.025"/>
       </geometry>
-      <origin xyz="0.095 0.0875 -0.030" rpy="1.570 0.0 0.0"/>
-      <material name="Black">
-        <color rgba="0.0 0.0 0.0 1.0"/>
-      </material>
+      <origin xyz="0.095 0.0875 0.0325" rpy="1.570 0.0 0.0"/>
+      <material name="Black" />
     </visual>
     <visual>
       <geometry>
         <cylinder radius="0.0325" length="0.025"/>
       </geometry>
-      <origin xyz="0.095 -0.0875 -0.030" rpy="1.570 0.0 0.0"/>
-      <material name="Black">
-        <color rgba="0.0 0.0 0.0 1.0"/>
-      </material>
+      <origin xyz="0.095 -0.0875 0.0325" rpy="1.570 0.0 0.0"/>
+      <material name="Black" />
     </visual>
     <visual>
       <geometry>
         <cylinder radius="0.0325" length="0.025"/>
       </geometry>
-      <origin xyz="-0.095 0.0875 -0.030" rpy="1.570 0.0 0.0"/>
-      <material name="Black">
-        <color rgba="0.0 0.0 0.0 1.0"/>
-      </material>
+      <origin xyz="-0.095 0.0875 0.0325" rpy="1.570 0.0 0.0"/>
+      <material name="Black" />
     </visual>
     <visual>
       <geometry>
         <cylinder radius="0.0325" length="0.025"/>
       </geometry>
-      <origin xyz="-0.095 -0.0875 -0.030" rpy="1.570 0.0 0.0"/>
-      <material name="Black">
-        <color rgba="0.0 0.0 0.0 1.0"/>
-      </material>
+      <origin xyz="-0.095 -0.0875 0.0325" rpy="1.570 0.0 0.0"/>
+      <material name="Black" />
     </visual>
     <visual>
       <geometry>
-        <cylinder radius="0.005" length="0.095"/>
+        <cylinder radius="0.005" length="0.105"/>
       </geometry>      
-      <origin xyz="0.080 0.0 0.115" rpy="0.0 0.0 0.0"/>
-      <material name="Black">
-        <color rgba="0.0 0.0 0.0 1.0"/>
-      </material>
+      <origin xyz="0.080 0.0 0.1725" rpy="0.0 0.0 0.0"/>
+      <material name="Black" />
     </visual>
   </link>
 
@@ -69,10 +63,33 @@
       <geometry>
         <box size="0.025 0.085 0.025"/>
       </geometry>
-      <material name="Sky Blue">
-        <color rgba="0.125 0.525 0.90 1.0"/>
-      </material>
+      <material name="Sky Blue" />
     </visual>
   </link>
+
+  <link name="imu_link">
+    <visual>
+      <geometry>
+        <box size="0.02032 0.0127 0.003"/>
+      </geometry>
+      <material name="PCB Green" />
+    </visual>
+  </link>
+
+  <material name="Black">
+    <color rgba="0.0 0.0 0.0 1.0"/>
+  </material>
+
+  <material name="Sky Blue">
+    <color rgba="0.125 0.525 0.90 1.0"/>
+  </material>
+
+  <material name="White">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+
+  <material name="PCB Green">
+    <color rgba="0.0 102.0 0.0 1.0"/>
+  </material>
 
 </robot>
